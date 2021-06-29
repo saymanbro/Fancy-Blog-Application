@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;600&family=Montserrat:wght@300&family=Varela+Round&display=swap');
+.nav_container{
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 999;
+    background-color:#fff;
+}
+.nav_left, .nav_right{
+    flex:3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.topIcon{
+    font-size: 26px;
+    margin: 0 10px;
+    color: #444;
+    cursor: pointer;
+}
+.nav_top_right{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.topName{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:27px;
+    height:27px;
+    border-radius: 50%;
+     background:#000;
+     font-weight: bold;
+     margin-top: 10px;
+     cursor:pointer;
+     color: rgb(233, 240, 234);
+}
+.nav_center{
+    flex:6
+}
+.nav_menu{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin: 0;
+
+}
+.nav_link{
+    list-style: none;
+    font-size: 20px;
+    color: #444;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 20px;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+.topSearchIcon{
+    color: #444;
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.navMenuBar{
+    display: none;
+}
+.site_logo{
+    display: none;
+}
+@media(max-width: 800px){
+    .nav_container{
+     width: 100%;
+     height:100vh;
+     display: block;
+      position: fixed;
+      top:0%;
+      right:-500%;
+     
+      overflow:hidden;
+      transition:850ms;
+    }
+    .site_logo{
+        width:12%;
+    }
+    .mobile_nav_items{
+        display: flex;
+        align-items:center;
+        background:#fbf2f4;
+        width:100%;
+        margin: 0 auto;
+        position:sticky;
+        top: 0%;
+        padding: 0 20px;
+        right:0%;
+        height:50px;
+        overflow:hidden;
+        justify-content:space-between;
+    }
+    .site_logo, .navMenuBar{
+        display: block;
+    }
+    .navMenuBar{
+        font-size: 25px;
+        color:teal;
+        font-weight: bold;
+        
+    }
+    .nav_container.active{
+        right:0;
+        transition:350ms;
+        padding-top: 100px;
+        background:#fbf2f4;
+        z-index: 999;
+  
+    }
+    .nav_left{
+        /* display: block; */
+        
+    }
+    .nav_center{
+        display: block;
+    }
+    .nav_menu{
+        display: grid;
+        margin-top:30px;
+        align-items: center;
+        place-items: center;
+       
+        
+    }
+    .nav_link{
+        padding: 4px 25px;
+        transition:350ms;
+        border-radius: 7px;
+        margin-bottom: 20px;
+    }
+    .nav_link:hover{
+        background:teal;
+        color:white;
+        
+    }
+    .nav_right{
+         margin-top: 30px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+    }
+    .topName{
+        margin-top: 13px;  
+    }
+}
